@@ -1,0 +1,69 @@
+*/*Значит обращаемся ко всем тегам на странице*/{
+
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,*:before,*:after/*Меняет подсчёт ширины блока так, чтоб было удобнее верстать...*/{
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus, :active{outline: none} /*Убираем линии обводки у некоторых браузеров...*/
+a:focus,a:active{outline: none}
+
+nav,footer,header,aside{ display: block; } /*Перечисляем некоторые html5 теги  и добовляем им значение блок, что делает их блочными...*/
+
+html,body/*обращаемся к тегам html и body...*/{
+
+/*Параметры, которые уравнивают поведение шривтов и элементов для разных браузеров, в том числе запрещают увелечение шрифта самовольное, на айфонах например.*/
+
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{ font-family: inherit; } /*Просим эти теги наследовать семейство шрифта, т.к. по умолчанию эти теги не наследуют семейство шрифта...*/
+
+input::-ms-clear{ display: none; }
+button{cursor: pointer;}
+button::-moz-focus-inner { padding:0; border:0; }
+a, a:visited{ text-decoration: none; }
+a:hover{ text-decoration: none; }
+ul li{ list-style: none; }
+img{ vertical-align: top; }
+
+h1,h2,h3,h4,h5,h6{ font-size:inherit;font-weight: 400; } /*Обнуляем заголовки h...*/
+
+.wrapper{
+
+    min-height: 100vh;
+    width: 100%;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+
+    color: rgb(46, 231, 0);
+    padding: 180px;
+    outline: 3px solid rgb(247, 180, 191);
+}
+
+.text:hover{
+
+    color: rgb(142, 67, 212);
+    outline: 3px solid rgb(255, 234, 237);
+    box-shadow: 0 0 11118px rgb(255, 213, 213), inset 0 0 88px rgb(255, 213, 213);
+    text-shadow: 0 0px 18px rgb(161, 87, 230);
+}
